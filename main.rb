@@ -5,6 +5,7 @@ require 'json'
 require 'csv'
 
 url = "https://www.kickstarter.com/discover/advanced?state=successful&category_id=16&woe_id=0&pledged=3&goal=3&raised=2&sort=end_date&seed=2520203"
+url.gsub!('&page=1', '')
 
 curl = Curl::Easy.new
 curl.follow_location = true
